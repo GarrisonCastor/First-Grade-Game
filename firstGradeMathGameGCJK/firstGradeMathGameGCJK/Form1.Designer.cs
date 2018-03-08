@@ -182,7 +182,7 @@
             this.equalLabel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.equalLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.equalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equalLabel.Location = new System.Drawing.Point(346, 45);
+            this.equalLabel.Location = new System.Drawing.Point(347, 45);
             this.equalLabel.Name = "equalLabel";
             this.equalLabel.Size = new System.Drawing.Size(54, 57);
             this.equalLabel.TabIndex = 14;
@@ -199,7 +199,7 @@
             this.startMenuGroupBox.Controls.Add(this.label3);
             this.startMenuGroupBox.Controls.Add(this.label2);
             this.startMenuGroupBox.Controls.Add(this.roundsLabel);
-            this.startMenuGroupBox.Location = new System.Drawing.Point(1, 12);
+            this.startMenuGroupBox.Location = new System.Drawing.Point(11, 12);
             this.startMenuGroupBox.Name = "startMenuGroupBox";
             this.startMenuGroupBox.Size = new System.Drawing.Size(679, 127);
             this.startMenuGroupBox.TabIndex = 15;
@@ -214,7 +214,7 @@
             this.activeGameGroupBox.Controls.Add(this.addSubLabel);
             this.activeGameGroupBox.Controls.Add(this.randNumLabel2);
             this.activeGameGroupBox.Controls.Add(this.randNumLabel1);
-            this.activeGameGroupBox.Location = new System.Drawing.Point(10, 166);
+            this.activeGameGroupBox.Location = new System.Drawing.Point(11, 166);
             this.activeGameGroupBox.Name = "activeGameGroupBox";
             this.activeGameGroupBox.Size = new System.Drawing.Size(654, 248);
             this.activeGameGroupBox.TabIndex = 16;
