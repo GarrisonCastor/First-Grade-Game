@@ -81,7 +81,7 @@ namespace firstGradeMathGameGCJK
             int answer = 0;
             int studentAnswer = 0;
 
-
+            
 
             //Get Student's answer
             int.TryParse(studentAnswerTextBox.Text, out studentAnswer);
