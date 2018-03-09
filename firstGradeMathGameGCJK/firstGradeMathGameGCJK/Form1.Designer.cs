@@ -158,6 +158,7 @@
             this.addSubLabel.Name = "addSubLabel";
             this.addSubLabel.Size = new System.Drawing.Size(54, 57);
             this.addSubLabel.TabIndex = 10;
+            this.addSubLabel.Text = "+";
             // 
             // answerButton
             // 
