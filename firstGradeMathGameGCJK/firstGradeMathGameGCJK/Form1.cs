@@ -20,7 +20,7 @@ namespace firstGradeMathGameGCJK
         //Running Totals/Round Count
         
         private double totalCorrect = 0.0;
-        private int currentRound = 0;
+        private int currentRound = 1;
 
         //Field Level User Inputed Data
         private string name = "";
@@ -58,8 +58,8 @@ namespace firstGradeMathGameGCJK
                         startMenuGroupBox.Visible = false;
                         activeGameGroupBox.Visible = true;
 
-
-                       int answer = mathGame(currentRound);
+                        randDisplay();
+                       
                         
                     }
                     else
@@ -81,75 +81,78 @@ namespace firstGradeMathGameGCJK
 
         private void answerButton_Click(object sender, EventArgs e)
         {
-            //Answer Button
+            int factor1, factor2;
+             
 
-            int answer = 0;
-            int studentAnswer = 0;
-
-     
-            //Get Student's answer
-            int.TryParse(studentAnswerTextBox.Text, out studentAnswer);
-
-            //call the calculated answer
-            answer = mathGame(currentRound);
-
-            //Check their answer
-            if (studentAnswer == answer)
+            if(currentRound < rounds)
             {
-                MessageBox.Show("Correct! Great Job!");
-
-                //Store their correct answer and move to next round
-                totalCorrect += 1;
                 
+                randDisplay();
+                checkAnswer();
+
+
+                currentRound++;
+
             }
             else
             {
-                MessageBox.Show("Incorrect! The Answer was " + answer.ToString());
-                
+                MessageBox.Show("Game Over. Total Correct: " + totalCorrect + " out of " + rounds);
             }
-
 
            
            
 
         }//end of Answer button
 
-
-        private int mathGame(int currentRound)
+        private void randDisplay()
         {
-            
-                int randAnswer = 0;
-
-                Random rand = new Random(highestNum);         //random method's () needs to have the variable for the highest value
-                Random rand2 = new Random(highestNum);                                    //in calculation we will need to do +1 to the random number or 
-                                                                                              //add it in inside the parenthesis
-
-                //Create arrays to be filled with random numbers
-                int[] randArray1 = new int[rounds];
-                int[] randArray2 = new int[rounds];
+            int num1, num2;
 
 
-            //Assign Random numbers to the current round's respective array block
-            
-                randArray1[currentRound] = rand.Next(highestNum);
-                randArray2[currentRound] = rand2.Next(highestNum);
+            //create rand object and assign to numbers
+            Random rand = new Random();
 
-                randAnswer = randArray1[currentRound] + randArray2[currentRound];
+            num1 = rand.Next(highestNum + 1);
+            num2 = rand.Next(highestNum + 1);
 
-                //display the numbers
-                randNumLabel1.Text = randArray1[currentRound].ToString();
-                randNumLabel2.Text = randArray1[currentRound].ToString();
+            //Display numbers
+            randNumLabel1.Text = num1.ToString();
+            randNumLabel2.Text = num2.ToString();
 
-                currentRound++;
-            
-                //Calculate the correct answer
-                
-
-                
-
-                return randAnswer;
             
             
+        }//end randDisplay
+
+
+       private void checkAnswer()
+        {
+            int number1, number2;
+            int answer;
+            int studentAnswer;
+
+           
+
+            //Get values of rand #
+            int.TryParse(randNumLabel1.Text, out number1);
+            int.TryParse(randNumLabel2.Text, out number2);
+
+            answer = number1 + number2;
+
+            //Get Student Answer
+            int.TryParse(studentAnswerTextBox.Text, out studentAnswer);
+
+            if(studentAnswer == answer)
+            {
+                MessageBox.Show("Correct!");
+                totalCorrect++;
+            }
+            else
+            {
+                MessageBox.Show("Incorrect, the correct answer was " + answer.ToString());
+            }
+        
+
         }
+       
     }
 }
