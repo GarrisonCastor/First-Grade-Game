@@ -45,6 +45,7 @@
             this.equalLabel = new System.Windows.Forms.Label();
             this.startMenuGroupBox = new System.Windows.Forms.GroupBox();
             this.activeGameGroupBox = new System.Windows.Forms.GroupBox();
+            this.roundLabel = new System.Windows.Forms.Label();
             this.startMenuGroupBox.SuspendLayout();
             this.activeGameGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -133,7 +134,7 @@
             // 
             this.randNumLabel1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.randNumLabel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.randNumLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.randNumLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.randNumLabel1.Location = new System.Drawing.Point(67, 37);
             this.randNumLabel1.Name = "randNumLabel1";
             this.randNumLabel1.Size = new System.Drawing.Size(73, 64);
@@ -143,7 +144,7 @@
             // 
             this.randNumLabel2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.randNumLabel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.randNumLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.randNumLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.randNumLabel2.Location = new System.Drawing.Point(256, 37);
             this.randNumLabel2.Name = "randNumLabel2";
             this.randNumLabel2.Size = new System.Drawing.Size(73, 64);
@@ -209,18 +210,29 @@
             // 
             // activeGameGroupBox
             // 
+            this.activeGameGroupBox.Controls.Add(this.roundLabel);
             this.activeGameGroupBox.Controls.Add(this.equalLabel);
             this.activeGameGroupBox.Controls.Add(this.studentAnswerTextBox);
             this.activeGameGroupBox.Controls.Add(this.answerButton);
             this.activeGameGroupBox.Controls.Add(this.addSubLabel);
             this.activeGameGroupBox.Controls.Add(this.randNumLabel2);
             this.activeGameGroupBox.Controls.Add(this.randNumLabel1);
-            this.activeGameGroupBox.Location = new System.Drawing.Point(11, 166);
+            this.activeGameGroupBox.Location = new System.Drawing.Point(11, 171);
             this.activeGameGroupBox.Name = "activeGameGroupBox";
             this.activeGameGroupBox.Size = new System.Drawing.Size(654, 248);
             this.activeGameGroupBox.TabIndex = 16;
             this.activeGameGroupBox.TabStop = false;
             this.activeGameGroupBox.Text = "Active Game Group";
+            this.activeGameGroupBox.Visible = false;
+            // 
+            // roundLabel
+            // 
+            this.roundLabel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.roundLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel.Location = new System.Drawing.Point(516, 25);
+            this.roundLabel.Name = "roundLabel";
+            this.roundLabel.Size = new System.Drawing.Size(95, 28);
+            this.roundLabel.TabIndex = 15;
             // 
             // firstGradeMathGameForm
             // 
@@ -259,6 +271,7 @@
         private System.Windows.Forms.Label equalLabel;
         private System.Windows.Forms.GroupBox startMenuGroupBox;
         private System.Windows.Forms.GroupBox activeGameGroupBox;
+        private System.Windows.Forms.Label roundLabel;
     }
 }
 

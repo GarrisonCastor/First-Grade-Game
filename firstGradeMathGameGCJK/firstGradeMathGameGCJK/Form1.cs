@@ -59,8 +59,9 @@ namespace firstGradeMathGameGCJK
                         activeGameGroupBox.Visible = true;
 
                         randDisplay();
-                       
-                        
+
+                        roundLabel.Text = "Round " + currentRound.ToString();
+                        currentRound++;
                     }
                     else
                     {
@@ -81,12 +82,14 @@ namespace firstGradeMathGameGCJK
 
         private void answerButton_Click(object sender, EventArgs e)
         {
-            int factor1, factor2;
-             
+            int number;
 
-            if(currentRound < rounds)
+            roundLabel.Text = "Round " + currentRound.ToString();
+
+            if (currentRound < rounds)
             {
-                
+
+
                 randDisplay();
                 checkAnswer();
 
@@ -115,11 +118,9 @@ namespace firstGradeMathGameGCJK
             num1 = rand.Next(highestNum + 1);
             num2 = rand.Next(highestNum + 1);
 
-            //Display numbers
+            //put numbers into labels
             randNumLabel1.Text = num1.ToString();
             randNumLabel2.Text = num2.ToString();
-
-            
             
         }//end randDisplay
 
